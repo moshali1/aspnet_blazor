@@ -1,0 +1,16 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+<AuthorizeView>
+    <Authorized>
+        Hello, @context.User.Identity?.Name
+        <a class="btn btn-sm btn-secondary" href="/MicrosoftIdentity/Account/SignOut" style="text-decoration:none;">
+            <span class="oi oi-account-logout" aria-hidden="true"></span>
+            Logout
+        </a>
+    </Authorized>
+    <NotAuthorized>
+        <a class="btn btn-sm btn-secondary" href="/MicrosoftIdentity/Account/SignIn" style="text-decoration:none;">
+            <span class="oi oi-account-login" aria-hidden="true"></span>
+            Login
+        </a>
+    </NotAuthorized>
+</AuthorizeView>
